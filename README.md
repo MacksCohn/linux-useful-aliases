@@ -36,8 +36,9 @@
 ### Docker Aliases
 Make sure you are using the docker.io build from apt
 
-export CURRENT_CONTAINER="CONTAINER_NAME_HERE"
-export BUILD_NAME="BUILD_NAME_HERE"
+`export CURRENT_CONTAINER="CONTAINER_NAME_HERE"`
+
+`export BUILD_NAME="BUILD_NAME_HERE"`
 
 To build with docker, run the following to set a name (in the directory with the Dockerfile)
 `sudo docker build -t BUILD_NAME_HERE:VERSION_HERE`
