@@ -36,34 +36,16 @@
 ### Docker Aliases
 Make sure you are using the docker.io build from apt
 
-`export CURRENT_CONTAINER="CONTAINER_NAME_HERE"`
-
-`export BUILD_NAME="BUILD_NAME_HERE"`
-
-To build with docker, run the following to set a name (in the directory with the Dockerfile)
-`sudo docker build -t BUILD_NAME_HERE:VERSION_HERE`
-creates an image, one time use if Dockerfile is unchanged
-
-##### Save changes to image
-
-`alias save='sudo docker commit $CURRENT_CONTAINER $BUILD_NAME'`
-
-##### Enter containers bash
-
-`alias enter='sudo docker exec -it $CURRENT_CONTAINER bash'`
-
-##### Open the container with network access and file access
-
-`alias run='sudo docker run -it -d --dns 10.0.0.1 --net=host --name $CURRENT_CONTAINER --privileged $BUILD_NAME'`
-
-##### Close the container and prune it
-
-`alias close='sudo docker kill $CURRENT_CONTAINER && sudo docker container prune -f'`
-
-##### Faster prune command
-
-`alias prune='sudo docker container prune -f'`
-
+```bash
+export CURRENT_CONTAINER="CONTAINER_NAME_HERE"
+export BUILD_NAME="BUILD_NAME_HERE/VERSION"
+alias save='sudo docker commit $CURRENT_CONTAINER $BUILD_NAME'  #Save changes to image
+alias enter='sudo docker exec -it $CURRENT_CONTAINER bash'    #Enter containers bash
+alias run='sudo docker run -it -d --dns 10.0.0.1 --net=host --name $CURRENT_CONTAINER --privileged $BUILD_NAME'   # Open the container with network access and file access
+alias close='sudo docker kill $CURRENT_CONTAINER && sudo docker container prune -f'   # Close the container and prune it
+alias prune='sudo docker container prune -f'          # Faster prune command
+alias build='sudo docker build -t $BUILD_NAME .'      # for building
+```
 ---
 
 ### Misc. aliases
