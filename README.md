@@ -50,7 +50,7 @@ creates an image, one time use if Dockerfile is unchanged
 
 ##### Enter containers bash
 
-`alias enter='sudo docker exec -it $CURRENT_CONTAINER bash`
+`alias enter='sudo docker exec -it $CURRENT_CONTAINER bash'`
 
 ##### Open the container with network access and file access
 
