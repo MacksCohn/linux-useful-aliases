@@ -6,18 +6,24 @@
 
 ##### Faster clear command
 
-`alias c="clear"`
+```bash
+alias c="clear"
+```
 
 ##### Opens the file explorer in the current directory
 
-`alias o="xdg-open ."`
+```bash
+alias o="xdg-open ."
+```
 
 
 ---
 
 ### Git better log command
 
-`git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+```bash
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
 
 ---
 
@@ -25,11 +31,15 @@
 
 ##### Build and source
 
-`alias cb="colcon build && source install/setup.bash"`
+```bash
+alias cb="colcon build && source install/setup.bash"
+```
 
 ##### Clean build and source
 
-`alias cbc="rm -rf /build /log /install && colcon build && source install/setup.bash"`
+```bash
+alias cbc="rm -rf /build /log /install && colcon build && source install/setup.bash"
+```
 
 ---
 
@@ -50,4 +60,6 @@ alias build='sudo docker build -t $BUILD_NAME .'      # for building
 
 ### Misc. aliases
 
-`alias py="python3"`
+```bash
+alias py="python3"
+```
