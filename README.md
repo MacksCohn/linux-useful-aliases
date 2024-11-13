@@ -58,7 +58,7 @@ creates an image, one time use if Dockerfile is unchanged
 
 ##### Close the container and prune it
 
-`alias close='sudo docker kill $CURRENT_CONTAINER && docker container prune -f'`
+`alias close='sudo docker kill $CURRENT_CONTAINER && sudo docker container prune -f'`
 
 ##### Faster prune command
 
