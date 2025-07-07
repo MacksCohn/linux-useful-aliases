@@ -77,10 +77,12 @@ alias py="python3"
 alias c="clear"
 alias o="xdg-open ."
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias cb="colcon build && source install/setup.bash"
-alias cbc="rm -rf /build /log /install && colcon build && source install/setup.bash"
+alias vim=nvim
+bind 'set bell-style none'
 alias py="python3"
 
+alias cb="colcon build && source install/setup.bash"
+alias cbc="rm -rf /build /log /install && colcon build && source install/setup.bash"
 
 export CURRENT_CONTAINER="CONTAINER_NAME_HERE"
 export BUILD_NAME="BUILD_NAME_HERE/VERSION"
@@ -90,6 +92,4 @@ alias run='sudo docker run -it -d --dns 10.0.0.1 --net=host --name $CURRENT_CONT
 alias close='sudo docker kill $CURRENT_CONTAINER && sudo docker container prune -f'   # Close the container and prune it
 alias prune='sudo docker container prune -f'          # Faster prune command
 alias build='sudo docker build -t $BUILD_NAME .'      # for building
-alias vim=nvim
-bind 'set bell-style none'
 ````
