@@ -15,7 +15,15 @@ alias c="clear"
 ```bash
 alias o="xdg-open ."
 ```
+##### Removes the bell sound on bash completion with wsl
+```bash
+bind 'set bell-style none'
+```
 
+##### Rebind nvim to vim (Definitely not needed)
+```bash
+alias vim=nvim
+```
 
 ---
 
@@ -82,4 +90,6 @@ alias run='sudo docker run -it -d --dns 10.0.0.1 --net=host --name $CURRENT_CONT
 alias close='sudo docker kill $CURRENT_CONTAINER && sudo docker container prune -f'   # Close the container and prune it
 alias prune='sudo docker container prune -f'          # Faster prune command
 alias build='sudo docker build -t $BUILD_NAME .'      # for building
-```
+alias vim=nvim
+bind 'set bell-style none'
+````
